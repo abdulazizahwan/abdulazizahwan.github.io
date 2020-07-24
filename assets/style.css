@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: fixed;
+    background-color: #564EFF;
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    color: #21262f;
+}
+
+p {
+    font-weight: normal;
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+
+.nav .logo img {
+    height: 36px;
+    vertical-align: middle;
+}
+
+/* Navigation */
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    align-content: center;
+}
+
+.nav li a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav li a:hover {
+    font-weight: 500;
+}
+
+.nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* Navigation icon */
+/* Appear when mobile mode */
+.nav .menu-icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 0px;
+    position: relative;
+    user-select: none;
+}
+
+.nav .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: #fff .2s ease-out;
+    width: 18px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.nav .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* End Navigation icon */
+
+/* Setting for menu botton */
+/* Using checkbox condition */
+
+.nav .menu-btn {
+    display: none;
+}
+
+.nav .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.nav .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.nav .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* End menu button */
+
+
+.content {
+    padding: 80px 20px 30px 20px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item-left {
+    flex-basis: 50%;
+}
+
+.flex-item-left img {
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.about-img {
+    text-align: center;
+}
+
+.about-description {
+    padding: 20px 0px;
+}
+
+.icon-social img {
+    width: 24px;
+    margin: 8px;
+}
+
+.flex-item-right {
+    flex-basis: 50%;
+}
+
+.flex-item-right iframe {
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#intro-name {
+    margin-bottom: 20px;
+}
+
+.flex-row-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    align-items: center;
+}
+
+.flex-item {
+    padding: 16px 0px;
+    background-color: #564EFF;
+    border-radius: 4px;
+    color: white;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: rgba(86, 78, 255) 0px 13px 19px -6px;
+    width: 80%;
+}
+
+.white {
+    background-color: white;
+    color: #564EFF;
+    box-shadow: rgb(163, 163, 163) 0px 13px 19px -6px;
+    font-weight: 500;
+}
+
+.flex-item:hover {
+    box-shadow: rgb(163, 163, 163) 0px 0px 19px -6px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 0px 10px 40px 10px;
+}
+
+.box p {
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+.img-skills {
+    width: 250px;
+}
+
+.box:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.projects {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgb(163, 163, 163) 0px 13px 19px -6px;
+}
+
+.projects:hover {
+    box-shadow: rgb(163, 163, 163) 0px 0px 19px -6px;
+    cursor: pointer;
+}
+
+.img-projects {
+    width: 250px;
+}
+
+footer {
+    width: 100%;
+    padding: 16px;
+    font-weight: normal;
+    color: white;
+    background-color: #21262F;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer span {
+    color: red;
+}
+
+footer a {
+    color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav li {
+        float: left;
+    }
+
+    .nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .nav .menu-icon {
+        display: none;
+    }
+
+    #intro-name {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .flex-row-column {
+        flex-direction: row;
+        align-items: unset;
+    }
+
+    .flex-item {
+        margin-right: 16px;
+        padding: 16px;
+        width: 40%;
+    }
+
+    .img-skills {
+        width: 250px;
+        padding: 20px;
+    }
+
+    .flex-item-left img {
+        width: 50%;
+    }
+
+    .about-description {
+        margin-left: -80px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
