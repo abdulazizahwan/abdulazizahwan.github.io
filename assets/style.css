@@ -18,6 +18,7 @@ header {
     position: fixed;
     background-color: #564EFF;
     width: 100%;
+    z-index: 3;
 }
 
 h1,
